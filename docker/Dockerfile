@@ -10,6 +10,8 @@ RUN apt-get update -qq \
 
 RUN apt-get update && apt-get upgrade --assume-yes
 
+RUN apt-get install -y libxml2-dev libxslt-dev python-dev
+
 RUN python -mvenv venv && ./venv/bin/pip install --upgrade pip
 
 COPY . .
